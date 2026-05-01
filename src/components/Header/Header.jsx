@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full top-0 left-0 py-2 px-[12%] bg-black/30 backdrop-blur-[10px] flex justify-between items-center z-[100] transition-all duration-300 ${scrolled ? 'py-1 bg-black/60' : ''
+      className={`fixed w-full top-0 left-0 py-0 px-[12%] bg-black/30 backdrop-blur-[10px] flex justify-between items-center z-[100] transition-all duration-300 ${scrolled ? 'py-0 bg-black/60' : ''
         }`}
     >
       {/* Logo with 3D spin animation */}
@@ -36,7 +36,7 @@ export default function Header() {
         <img
           src="/images/images__1_-removebg-preview.png"
           alt="Nethmi Portfolio Logo"
-          className="w-[100px] h-[100px] logo-spin animate-spin-3d"
+          className="w-[80px] h-[80px] logo-spin animate-spin-3d"
         />
       </a>
 
