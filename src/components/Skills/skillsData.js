@@ -10,7 +10,7 @@ import {
 const skillsData = [
   {
     category: 'Programming Languages',
-    color: '#a78bfa',
+    color: '#00ff51',
     skills: [
       { name: 'JavaScript', icon: FaJs },
       { name: 'Java',       icon: FaJava },
@@ -21,7 +21,7 @@ const skillsData = [
   },
   {
     category: 'Frontend Development',
-    color: '#f97316',
+    color: '#38bdf8',
     skills: [
       { name: 'HTML',        icon: FaHtml5 },
       { name: 'CSS',         icon: FaCss3Alt },
@@ -34,7 +34,7 @@ const skillsData = [
   },
   {
     category: 'Backend Development',
-    color: '#00ff51',
+    color: '#fb923c',
     skills: [
       { name: 'Node.js',    icon: FaNode },
       { name: 'Express.js', icon: SiExpress },
@@ -44,7 +44,7 @@ const skillsData = [
   },
   {
     category: 'Databases',
-    color: '#38bdf8',
+    color: '#f97316',
     skills: [
       { name: 'MongoDB', icon: SiMongodb },
       { name: 'MySQL',   icon: SiMysql },
@@ -52,7 +52,7 @@ const skillsData = [
   },
   {
     category: 'Tools & Platforms',
-    color: '#fb923c',
+    color: '#a78bfa',
     skills: [
       { name: 'Git',      icon: FaGitAlt },
       { name: 'Postman',  icon: SiPostman },
