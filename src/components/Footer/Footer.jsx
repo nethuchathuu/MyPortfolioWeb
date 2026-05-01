@@ -13,7 +13,7 @@ const socialLinks = [
     label: 'LinkedIn',
   },
   {
-    href: 'https://www.hackerrank.com/profile/chandrasiriniha1',
+    href: 'https://www.hackerrank.com/profile/nethuTharuka',
     icon: <SiHackerrank />,
     label: 'HackerRank',
   },
