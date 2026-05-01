@@ -24,14 +24,16 @@ export default function About() {
           About <span className="text-main">Me</span>
         </h2>
         <p className="text-base md:text-lg leading-relaxed max-w-2xl">
-          I am a passionate web developer and full stack developer with a
-          strong interest in data analysis. Currently, I am pursuing my
-          undergraduate degree in Computer Science at Trincomalee Campus,
-          Eastern University, Sri Lanka. I enjoy creating innovative web
-          solutions and continually expanding my skill set in both front-end and
-          back-end development. My journey in technology is driven by a
-          curiosity for how data shapes our world and a desire to solve complex
-          problems with creative, efficient code.
+          I'm passionate about creating responsive, user-friendly,
+          and visually engaging digital experiences.
+          Currently pursuing my undergraduate degree in Computer Science
+          at Trincomalee Campus, Eastern University, Sri Lanka.
+          I enjoy building innovative solutions that combine creativity
+          with functionality, while continuously improving my skills
+          and exploring new technologies.
+          Driven by curiosity and a problem-solving mindset,
+          I aim to develop efficient, impactful solutions
+          that enhance user experiences.
         </p>
       </div>
     </section>

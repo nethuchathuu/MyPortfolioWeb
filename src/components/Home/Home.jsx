@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { SiHackerrank } from 'react-icons/si'
 import { useScrollReveal, useStaggerReveal } from '../../hooks/useScrollReveal'
@@ -21,6 +22,36 @@ const socialLinks = [
 ]
 
 export default function Home() {
+  const titles = ['Full Stack Developer', 'UI/UX Designer', 'QA Engineer']
+  const [titleIndex, setTitleIndex] = useState(0)
+  const [currentText, setCurrentText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const typeSpeed = isDeleting ? 50 : 100
+    const currentTitle = titles[titleIndex]
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && currentText === currentTitle) {
+        // Pause at the end before deleting
+        setTimeout(() => setIsDeleting(true), 1500)
+      } else if (isDeleting && currentText === '') {
+        // Move to the next word after deleting
+        setIsDeleting(false)
+        setTitleIndex((prev) => (prev + 1) % titles.length)
+      } else {
+        // Typing or deleting
+        setCurrentText(
+          isDeleting
+            ? currentTitle.substring(0, currentText.length - 1)
+            : currentTitle.substring(0, currentText.length + 1)
+        )
+      }
+    }, typeSpeed)
+
+    return () => clearTimeout(timer)
+  }, [currentText, isDeleting, titleIndex])
+
   const h1Ref = useScrollReveal({ origin: 'top', delay: 300 })
   const h3Ref = useScrollReveal({ origin: 'right', delay: 400 })
   const pRef = useScrollReveal({ origin: 'bottom', delay: 500 })
@@ -47,22 +78,25 @@ export default function Home() {
 
         <h3
           ref={h3Ref}
-          className="text-2xl md:text-3xl lg:text-4xl my-4"
+          className="text-2xl md:text-3xl lg:text-4xl my-4 min-h-[40px] md:min-h-[48px]"
         >
-          I am a <span className="text-main">Full Stack Developer</span>
+          I am a <span className="text-main">{currentText}<span className="animate-pulse">|</span></span>
         </h3>
 
         <p
           ref={pRef}
           className="text-sm md:text-base font-medium leading-relaxed max-w-xl"
         >
-          I specialize in creating responsive, visually appealing, and
-          user-friendly websites that deliver seamless digital experiences. With
-          expertise in both front-end and back-end development, I bring creative
-          design and functionality together to build impactful web solutions.
-          I'm dedicated to mastering the latest technologies and continuously
-          enhancing my skills to provide innovative solutions for my clients.
-          Let's build something incredible together!
+          I'm passionate about building responsive, user-friendly,
+          and visually engaging digital experiences.
+          I focus on combining creativity with functionality
+          to develop solutions that are both effective and intuitive.
+          Continuously learning and adapting
+          to new technologies,
+          I strive to deliver high-quality and impactful results.
+          I enjoy solving real-world problems
+          and creating seamless experiences
+          that bring ideas to life.
         </p>
 
         {/* Social Icons */}

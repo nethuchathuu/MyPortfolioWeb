@@ -11,10 +11,20 @@ import { useState } from 'react'
 function App() {
   const [showOtherProjects, setShowOtherProjects] = useState(false)
 
+  const handleBackToProjects = () => {
+    setShowOtherProjects(false)
+    setTimeout(() => {
+      const projectsSection = document.getElementById('projects')
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'instant' })
+      }
+    }, 10)
+  }
+
   if (showOtherProjects) {
     return (
       <div className="font-poppins bg-bg-primary text-white min-h-screen overflow-x-hidden">
-        <OtherProjects onBack={() => setShowOtherProjects(false)} />
+        <OtherProjects onBack={handleBackToProjects} />
         <Footer />
       </div>
     )

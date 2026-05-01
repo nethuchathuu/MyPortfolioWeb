@@ -76,8 +76,8 @@ const projectsData = [
     image: '/images/quest.png',
     techstack: 'Figma',
     description:
-      'A mobile-first community platform designed to protect oceans and inspire eco-friendly action, combining awareness, gamification, and marine learning. Features a social wave feed, eco events, a marine learning hub, a fun mini-game, and a leaderboard — built for the Cre8X 2.0 hackathon.',
-    github: 'https://github.com/nethuchathuu/AquaNet.git',
+      'A marine life quiz app designed for the Cre8X 2.0 competition, featuring engaging onboarding, a pre-survey, interactive quiz screens, results summary, and an AI-powered guide — focused on usability, accessibility, and creative design.',
+    github: 'https://github.com/nethuchathuu/AquaQuest.git',
   },
   {
     title: 'Weather App',

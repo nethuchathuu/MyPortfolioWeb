@@ -38,7 +38,7 @@ export default function OtherProjects({ onBack }) {
             onClick={onBack}
             className="md:absolute left-0 top-1/2 md:-translate-y-1/2 flex items-center gap-2 text-gray-400 hover:text-main transition-all duration-300 bg-bg-secondary/50 hover:bg-bg-secondary py-3 px-6 rounded-xl hover:shadow-[0_0_20px_rgba(0,255,81,0.2)] mb-8 md:mb-0 w-fit"
           >
-            <FaArrowLeft /> Back to Home
+            <FaArrowLeft /> Back to Projects
           </button>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-main underline decoration-white underline-offset-8 mx-auto text-center">
