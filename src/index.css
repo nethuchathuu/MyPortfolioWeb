@@ -100,24 +100,135 @@ body {
   box-shadow: 0 0 25px #00ff51, 0 0 50px #00ff51, 0 0 100px #00ff51;
 }
 
-/* ===== Skill Box ===== */
-.skill-box {
-  @apply p-6 bg-bg-secondary rounded-xl text-center relative transition-all duration-300;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+/* ===== Skill Carousel Section ===== */
+
+.skill-carousel-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  cursor: default;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  animation: skillFloat 4s ease-in-out infinite alternate;
 }
 
-.skill-box:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #00ff51, 0 0 50px #00ff51;
+.skill-carousel-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: var(--cat-color, #00ff51);
+  box-shadow: 0 0 25px color-mix(in srgb, var(--cat-color, #00ff51) 50%, transparent),
+              0 0 50px color-mix(in srgb, var(--cat-color, #00ff51) 20%, transparent);
 }
 
-.skill-box .skill-icon {
-  @apply text-5xl text-main mb-3 transition-all duration-500;
+.skill-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% 120%,
+    color-mix(in srgb, var(--cat-color, #00ff51) 30%, transparent) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
-.skill-box:hover .skill-icon {
-  transform: rotate(360deg);
-  @apply text-white;
+.skill-carousel-card:hover .skill-card-glow {
+  opacity: 1;
+}
+
+.skill-card-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card-icon {
+  font-size: 2rem;
+  color: var(--cat-color, #00ff51);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s;
+  flex-shrink: 0;
+}
+
+.skill-carousel-card:hover .skill-card-icon {
+  transform: rotate(360deg) scale(1.2);
+  color: #fff;
+}
+
+.skill-card-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.skill-carousel-card:hover .skill-card-name {
+  color: #fff;
+}
+
+.skill-card-shine {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.skill-carousel-card:hover .skill-card-shine {
+  left: 130%;
+}
+
+@keyframes skillFloat {
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
+
+/* Carousel Slide Animations */
+.slide-exit-left { animation: slideOutLeft 0.4s forwards cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-exit-right { animation: slideOutRight 0.4s forwards cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-enter-right { animation: slideInRight 0.4s forwards cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-enter-left { animation: slideInLeft 0.4s forwards cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-enter { animation: fadeIn 0.4s forwards ease-in-out; }
+
+@keyframes slideOutLeft {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-100px); opacity: 0; }
+}
+@keyframes slideOutRight {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(100px); opacity: 0; }
+}
+@keyframes slideInRight {
+  0% { transform: translateX(100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInLeft {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* ===== Project Card ===== */

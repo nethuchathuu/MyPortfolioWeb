@@ -1,5 +1,53 @@
 const projectsData = [
   {
+    title: 'BudgetBee - Automated Expense Tracker Using Smart Receipt Recognition',
+    image: '/images/budgetbee.png',
+    techstack: 'React.js, Vite,Tailwind CSS, Node.js, Express.js, MySQL, Python, Tesseract OCR, Firebase, JWT, Recharts, jsPDF',
+    description:
+      'A full-stack expense management application with OCR-powered receipt digitization, auto-categorization, and a React dashboard featuring real-time analytics, budget alerts, and spending summaries. Secured with Firebase and JWT, with PDF reports and email notifications.',
+    github: 'https://github.com/nethuchathuu/BudgetBee.git',
+  },
+  {
+    title: 'GrocyPro - Full-Stack POS & Inventory Management System',
+    image: '/images/project1.png',
+    techstack: 'React, TypeScript, Vite, | Tailwind CSS,  Node.js , Express , Firebase Firestore , Recharts , Netlify , Render',
+    description:
+      'A full-stack grocery store management system with real-time inventory tracking, sales processing, and analytics. Features a dashboard with sales trend charts, low-stock alerts, and a discount code engine, deployed to production with a complete CI/CD pipeline.',
+    github: 'https://github.com/nethuchathuu/GrocyProBackend.git',
+  },
+  {
+    title: 'NeuroRelief Sri Lanka – Migraine Expert System',
+    image: '/images/project1.png',
+    techstack: 'GNU Prolog, React.js, Logic Programming, Expert Systems',
+    description:
+      'An AI-driven migraine diagnosis expert system with dynamic question generation and confidence-scored results. Features personalized recommendations covering medication, lifestyle, and dietary guidance through an accessible interface built on clinical logic programming.',
+    github: 'https://github.com/nethuchathuu/NeuroRelief_Migraine.git',
+  },
+  {
+    title: 'Talko – Personal Virtual Assistant',
+    image: '/images/project1.png',
+    techstack: ' React ,  Web Speech API ,  Gemini AI ,  JavaScript',
+    description:
+      'A browser-based voice assistant with real-time speech recognition, AI-generated responses, and speech synthesis. Features smart command handling for time, date, and browser actions, with full interaction control via a responsive stop mechanism.',
+    github: 'https://github.com/nethuchathuu/virtual_assistant.git',
+  },
+  {
+    title: 'Snapchat UI/UX Redesign – HCI Exhibition Project',
+    image: '/images/project1.png',
+    techstack: 'Figma ',
+    description:
+      'A collaborative HCI project redesigning Snapchat\'s UI, addressing usability issues in icon clarity, onboarding, navigation, and accessibility through heuristic evaluation and real user feedback. Delivered as a high-fidelity Figma prototype, presented at a university exhibition.',
+    github: 'https://github.com/nethuchathuu/SnapchatRedesign.git',
+  },
+  {
+    title: 'ChatChefs - AI-Powered Cooking Assistant',
+    image: '/images/project1.png',
+    techstack: 'React.js, Tailwind CSS, Vite, Gemini API, Spoonacular API, Framer Motion , Web Speech API',
+    description:
+      'An AI-powered cooking assistant that generates recipe suggestions through natural conversation, with nutrition data and voice input support. Features a responsive, mobile-friendly UI with smooth animations and typewriter effects.',
+    github: 'https://github.com/nethuchathuu/chatChefs.git',
+  },
+  {
     title: 'To-do list app',
     image: '/images/project1.png',
     description:

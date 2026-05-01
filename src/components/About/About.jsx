@@ -12,7 +12,7 @@ export default function About() {
       {/* About Image */}
       <div ref={imgRef} className="flex-shrink-0">
         <img
-          src="/images/myPhoto2.jpg"
+          src="/images/my2.png"
           alt="Nethmi Heshani Tharuka"
           className="w-[52vw] lg:w-[32vw] profile-glow"
         />
